@@ -1,0 +1,57 @@
+/**
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/***********************************************************************************/
+/* ACO Editor v3
+/*
+/* Chegham wassim & Marchadour hugo
+/*
+/* The Install file
+/*
+/***********************************************************************************/
+
+/!\ IMPORTANT /!\ 
+------------------
+In order to test the project locally (on your machine) you MUST install
+a web server and a PHP environment. 
+We recommand you to install the Apache Web server and PHP 5.3+
+
+
+
+1) SVN repository
+2) ZIP Install
+3) Online demo
+
+1) SVN repository:
+------------------
+You can grab and install the ACO Editor directly from the SVN by simply typing this command
+on your command line (you must have installed the subversion application before!):
+	
+	svn checkout http://acoprojet.googlecode.com/svn/trunk/ acoprojet
+	cd acoprojet/
+
+
+2) ZIP Install:
+---------------
+A zipped version is hosted at http://acoeditor.cheghamwassim.com/acoeditor_v3.zip
+To download it, you can use the wget programm as the following:
+
+	wget http://acoeditor.cheghamwassim.com/acoeditor_v3.zip
+	unzip acoeditor_3.zip
+	cd acoeditor_v3/
+
+
+3) Online demo:
+---------------
+If you don't care about insatlling the acoeditor and want just to demo the app. Please 
+visit the official webpage at http://acoeditor.cheghamwassim.com

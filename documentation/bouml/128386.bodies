@@ -1,0 +1,10 @@
+class Clipboard
+!!!130434.php!!!	__construct(in str :  = "") : void
+
+		$this->_text = $str;
+!!!130562.php!!!	setText(inout str : String) : void
+ 
+		$this->_text = $str; 
+!!!130690.php!!!	getText() : the
+ 
+		return $this->_text; 

@@ -1,0 +1,9 @@
+phpdoc=/data/svn/acoprojet/bin/PhpDocumentor/phpdoc
+
+if [ -f $phpdoc ]; 
+then
+	$phpdoc -s on -pp on -ti 'ACO Editor' -j on -t /var/www/acoprojet/documentation/phpdoc -o HTML:default:default -d /var/www/acoprojet/bin/patterns
+
+	mv phpdoc/media/banner.cs phpdoc/media/banner.css
+	mv phpdoc/media/stylesheet.cs phpdoc/media/stylesheet.css
+fi;

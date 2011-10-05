@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Caretaker</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Caretaker</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The Caretaker that will save all the concrete Mementos</p>
+<p class="description"><p>The Caretaker that will save all the concrete Mementos</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> wassim Chegham &amp; hugo Marchadour</li>
+				<li><span class="field">version:</span> 0.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Caretaker.php.html">/Caretaker.php</a> (line <span class="field"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																<div class="var-title">
+					<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>
+					<a href="#$_buffer" title="details" class="var-name">$_buffer</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Integer</span>
+					<a href="#$_current" title="details" class="var-name">$_current</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Integer</span>
+					<a href="#$_end" title="details" class="var-name">$_end</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Memento[]</span>
+					<a href="#$_mementos" title="details" class="var-name">$_mementos</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">$buffer</span>&nbsp;<span class="var-name">&$buffer</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#atTheEnd" title="details" class="method-name">atTheEnd</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#decCurrent" title="details" class="method-name">decCurrent</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../Memento/Memento.html">Memento</a></span>
+										<a href="#getCurrent" title="details" class="method-name">getCurrent</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../Memento/Memento.html">Memento</a></span>
+										<a href="#getNextMemento" title="details" class="method-name">&amp;getNextMemento</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#resetCurrent" title="details" class="method-name">resetCurrent</a>
+											(<span class="var-type"><a href="../Memento/Memento.html">Memento</a></span>&nbsp;<span class="var-name">$current</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#save" title="details" class="method-name">save</a>
+											(<span class="var-type">$commandSave</span>&nbsp;<span class="var-name">&$commandSave</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_buffer" id="$_buffer"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>
+			<span class="var-name">$_buffer</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a50">50</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current Buffer that</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_current" id="$_current"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Integer</span>
+			<span class="var-name">$_current</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a44">44</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current index in the Memento array The current Memento</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_end" id="$_end"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Integer</span>
+			<span class="var-name">$_end</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The highest value of the current Memeno array we should not go beyond It is the lenght of the array</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_mementos" id="$_mementos"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Memento[]</span>
+			<span class="var-name">$_mementos</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The array where to store the Mementos</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a58">58</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The constructor of the Caretaker</p>
+<p class="description"><p>The constructor of the Caretaker</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">$buffer</span>&nbsp;<span class="var-name">&$buffer</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$buffer</span>
+				<span class="var-name">&$buffer</span><span class="var-description">: The reference of the buffer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodatTheEnd" id="atTheEnd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">atTheEnd</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a106">106</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check weither we reached the end of the caretaker or not</p>
+<p class="description"><p>Check weither we reached the end of the caretaker or not</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True if we are at the end of the caretaker</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			atTheEnd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddecCurrent" id="decCurrent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">decCurrent</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decrement the current index</p>
+<p class="description"><p>Decrement the current index</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			decCurrent
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrent" id="getCurrent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCurrent</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a88">88</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current memento</p>
+<p class="description"><p>Get the current memento</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The current memento</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Memento/Memento.html">Memento</a></span>
+		<span class="method-name">
+			getCurrent
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNextMemento" id="getNextMemento"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNextMemento</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a115">115</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the next memento</p>
+<p class="description"><p>Get the next memento</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The next memento or NULL if there is no next element</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Memento/Memento.html">Memento</a></span>
+		<span class="method-name">
+			&amp;getNextMemento
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodresetCurrent" id="resetCurrent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">resetCurrent</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a97">97</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reset the current Memento</p>
+<p class="description"><p>Reset the current Memento</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			resetCurrent
+		</span>
+					(<span class="var-type"><a href="../Memento/Memento.html">Memento</a></span>&nbsp;<span class="var-name">$current</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../Memento/Memento.html">Memento</a></span>
+				<span class="var-name">$current</span><span class="var-description">: The new memento</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsave" id="save"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">save</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__Caretaker.php.html#a72">72</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save (memorise) the Memento</p>
+<p class="description"><p>Save (memorise) the Memento</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			save
+		</span>
+					(<span class="var-type">$commandSave</span>&nbsp;<span class="var-name">&$commandSave</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$commandSave</span>
+				<span class="var-name">&$commandSave</span><span class="var-description">: The reference of the memento we want to save</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 03 Dec 2010 16:49:27 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

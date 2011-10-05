@@ -1,0 +1,7 @@
+class Cut
+!!!132226.php!!!	__construct(inout receiver : Buffer) : void
+
+		$this->_receiver = $receiver;
+!!!132354.php!!!	execute() : void
+
+		$this->_receiver->cutText();

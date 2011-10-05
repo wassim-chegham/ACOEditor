@@ -1,0 +1,124 @@
+format 74
+
+classinstance 128258 class_ref 129154 // Ihm
+  name ""   xyz 92.8312 4 2005 life_line_z 2010
+classinstance 139138 class_ref 150146 // Replay
+  name ""   xyz 325 4 2000 life_line_z 2000
+classinstance 140034 class_ref 136578 // Caretaker
+  name ""   xyz 648 12 2000 life_line_z 2000
+note 141058 "if ret"
+  color green  xyzwh 22.65 123.6 0 847 327
+note 143490 "do 
+
+
+
+
+
+
+
+
+
+
+while ret"
+  color lightmediumgreen  xyzwh 28.15 207.1 0 831 229
+classinstance 145026 class_ref 128770 // Memento
+  name "m"   xyz 800 4 2000 life_line_z 2000
+durationcanvas 128770 classinstance_ref 128258 // :Ihm
+  xyzwh 111 144 2015 11 51
+end
+durationcanvas 142210 classinstance_ref 128258 // :Ihm
+  xyzwh 111 51 2020 11 45
+end
+durationcanvas 142338 classinstance_ref 139138 // :Replay
+  xyzwh 346 51 2010 11 45
+end
+durationcanvas 142722 classinstance_ref 139138 // :Replay
+  xyzwh 346 145 2010 11 47
+end
+durationcanvas 143106 classinstance_ref 128258 // :Ihm
+  xyzwh 111 229 2020 11 25
+end
+durationcanvas 143234 classinstance_ref 139138 // :Replay
+  xyzwh 346 231 2010 11 88
+end
+durationcanvas 143618 classinstance_ref 128258 // :Ihm
+  xyzwh 111 345 2020 11 36
+end
+durationcanvas 143746 classinstance_ref 139138 // :Replay
+  xyzwh 346 345 2010 11 32
+end
+durationcanvas 144130 classinstance_ref 140034 // :Caretaker
+  xyzwh 677 65 2010 11 25
+end
+durationcanvas 144642 classinstance_ref 140034 // :Caretaker
+  xyzwh 677 258 2010 11 38
+end
+durationcanvas 145154 classinstance_ref 145026 // m:Memento
+  xyzwh 828 306 2010 11 25
+end
+msg 142466 synchronous
+  from durationcanvas_ref 142210
+  to durationcanvas_ref 142338
+  yz 52 2025 explicitmsg "initStep(0)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 208 36
+msg 142594 return
+  from durationcanvas_ref 142338
+  to durationcanvas_ref 142210
+  yz 84 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 142850 synchronous
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 142722
+  yz 146 2020 msg operation_ref 153218 // "isDone()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 209 130
+msg 142978 return
+  from durationcanvas_ref 142722
+  to durationcanvas_ref 128770
+  yz 178 2020 explicitmsg "ret"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 226 162
+msg 143362 synchronous
+  from durationcanvas_ref 143106
+  to durationcanvas_ref 143234
+  yz 231 2025 msg operation_ref 153730 // "execute()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 287 219
+msg 143874 synchronous
+  from durationcanvas_ref 143618
+  to durationcanvas_ref 143746
+  yz 345 2025 msg operation_ref 153218 // "isDone()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 290 329
+msg 144002 return
+  from durationcanvas_ref 143746
+  to durationcanvas_ref 143618
+  yz 366 2025 explicitmsg "ret"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 130 351
+msg 144258 synchronous
+  from durationcanvas_ref 142338
+  to durationcanvas_ref 144130
+  yz 65 2030 explicitmsg "resetCurrent(0)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 474 49
+msg 144770 synchronous
+  from durationcanvas_ref 143234
+  to durationcanvas_ref 144642
+  yz 258 2015 explicitmsg "getNextMemento()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 554 243
+msg 144898 return
+  from durationcanvas_ref 144642
+  to durationcanvas_ref 143234
+  yz 279 2030 explicitmsg "m"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 372 269
+msg 145282 synchronous
+  from durationcanvas_ref 143234
+  to durationcanvas_ref 145154
+  yz 306 2015 msg operation_ref 169858 // "redo() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 772 294
+end

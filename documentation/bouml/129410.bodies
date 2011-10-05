@@ -1,0 +1,7 @@
+class Paste
+!!!135170.php!!!	__construct(inout receiver : Buffer) : void
+
+		$this->_receiver = $receiver;
+!!!135298.php!!!	execute() : void
+
+		$this->_receiver->pasteText();

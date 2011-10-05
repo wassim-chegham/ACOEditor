@@ -1,0 +1,72 @@
+format 74
+
+classinstance 128258 class_ref 129154 // Ihm
+  name ""   xyz 70.8312 4 2005 life_line_z 2010
+classinstance 128386 class_ref 150146 // Replay
+  name ""   xyz 641.228 4 2005 life_line_z 2010
+classinstance 139138 class_ref 156802 // Undo
+  name ""   xyz 311 4 2000 life_line_z 2000
+classinstance 140034 class_ref 136578 // Caretaker
+  name ""   xyz 939 4 2000 life_line_z 2000
+note 141058 "nbStep = (current%10)
+
+while(nbStep>0)
+
+
+nbStep--"
+  color lightmediumgreen  xyzwh 187.65 221.6 0 805 129
+durationcanvas 128770 classinstance_ref 128258 // :Ihm
+  xyzwh 89 55 2015 11 299
+end
+durationcanvas 139266 classinstance_ref 139138 // :Undo
+  xyzwh 330 67 2010 11 281
+end
+durationcanvas 140418 classinstance_ref 140034 // :Caretaker
+  xyzwh 968 124 2010 11 36
+end
+durationcanvas 141954 classinstance_ref 140034 // :Caretaker
+  xyzwh 968 178 2010 11 26
+end
+durationcanvas 142210 classinstance_ref 140034 // :Caretaker
+  xyzwh 968 97 2010 11 26
+end
+durationcanvas 142722 classinstance_ref 128386 // :Replay
+  xyzwh 662 294 2020 11 26
+end
+msg 139394 synchronous
+  from durationcanvas_ref 128770
+  to durationcanvas_ref 139266
+  yz 67 2020 msg operation_ref 152578 // "execute()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 135 51
+msg 140546 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 140418
+  yz 124 2020 explicitmsg "getCurrent()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 889 111
+msg 140930 return
+  from durationcanvas_ref 140418
+  to durationcanvas_ref 139266
+  yz 148 2020 explicitmsg "current"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 362 139
+msg 142082 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 141954
+  yz 178 3005 explicitmsg "resetCurrent(current - (current%10))"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 763 166
+msg 142338 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 142210
+  yz 97 3005 msg operation_ref 169986 // "decCurrent() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 887 82
+msg 142850 synchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 142722
+  yz 294 2025 msg operation_ref 153730 // "execute()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 474 278
+end

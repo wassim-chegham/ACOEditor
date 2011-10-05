@@ -1,0 +1,63 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Ihm</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Ihm</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass129154"></a>
+<p>Declaration :</p><ul>
+<li>Php : protected class Ihm implements <a href="class128130.html#refclass128130"><b>Observer</b></a>, <a href="class128258.html#refclass128258"><b>Subject</b></a> </li></ul><div class="sub">
+<a name="refattribute130050"></a>
+<table><tr><td><div class="element">Attribute <b>_text</b></div></td></tr></table>
+<p>The content of the current text<br />@var _text<br />@access private <br />@type String<br /><br /></p><p>Declaration :</p><ul><li>Uml : - _text : _text</li><li>Php : private $_text</li></ul><a name="refattribute130178"></a>
+<table><tr><td><div class="element">Attribute <b>_selectionStart</b></div></td></tr></table>
+<p>The begining of a selection.<br />@var _selectionStart<br />@access private <br />@type Integer<br /><br /></p><p>Declaration :</p><ul><li>Uml : - _selectionStart : _selectionStart</li><li>Php : private $_selectionStart</li></ul><a name="refattribute130306"></a>
+<table><tr><td><div class="element">Attribute <b>_selectionEnd</b></div></td></tr></table>
+<p>The end of a selection<br />@var _selectionEnd<br />@access private <br />@type Integer<br /><br /></p><p>Declaration :</p><ul><li>Uml : - _selectionEnd : _selectionEnd</li><li>Php : private $_selectionEnd</li></ul><a name="refattribute130434"></a>
+<table><tr><td><div class="element">Attribute <b>_clipboard</b></div></td></tr></table>
+<p>The clipboard object<br />@var _clipboard<br />@access private <br />@type Clipboard<br /><br /></p><p>Declaration :</p><ul><li>Uml : - _clipboard : _clipboard</li><li>Php : private $_clipboard</li></ul><a name="refattribute130562"></a>
+<table><tr><td><div class="element">Attribute <b>_observers</b></div></td></tr></table>
+<p>The array who contains all observers<br />@var _observers<br />@access private <br />@type array observer<br /><br /></p><p>Declaration :</p><ul><li>Uml : - _observers : _observers</li><li>Php : private $_observers</li></ul><a name="refattribute130690"></a>
+<table><tr><td><div class="element">Attribute <b>_current_char</b></div></td></tr></table>
+<p><br /></p><p>Declaration :</p><ul><li>Uml : - _current_char : </li><li>Php : private $_current_char</li></ul><a name="refattribute130818"></a>
+<table><tr><td><div class="element">Attribute <b>_commands</b></div></td></tr></table>
+<p><br /></p><p>Declaration :</p><ul><li>Uml : - _commands : </li><li>Php : private $_commands</li></ul><a name="refoperation132482"></a>
+<table><tr><td><div class="element">Operation <b>__construct</b></div></td></tr></table><p>The constructor of the class<br />@return ${type}<br /><br /></p><p>Declaration :</p><ul><li>Uml : + __construct(inout buffer : ) : void</li><li>Php : public function __construct(&amp; $buffer) </li></ul><a name="refoperation132610"></a>
+<table><tr><td><div class="element">Operation <b>getChar</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getChar() : char</li><li>Php : public function getChar() </li></ul><a name="refoperation132738"></a>
+<table><tr><td><div class="element">Operation <b>setChar</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + setChar(inout char : char) : </li><li>Php : public function setChar($char) </li></ul><a name="refoperation132866"></a>
+<table><tr><td><div class="element">Operation <b>getSelectionStart</b></div></td></tr></table><p>Get the begining of the selection<br />@return ${type} the position of the begining of the selection<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + getSelectionStart() : int</li><li>Php : public function getSelectionStart() </li></ul><a name="refoperation132994"></a>
+<table><tr><td><div class="element">Operation <b>getSelectionEnd</b></div></td></tr></table><p>Set the end of the selection<br />@return ${type} the position of the begining of the selection<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + getSelectionEnd() : int</li><li>Php : public function getSelectionEnd() </li></ul><a name="refoperation133122"></a>
+<table><tr><td><div class="element">Operation <b>getText</b></div></td></tr></table><p>Get the current text<br />@return ${type} current text<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + getText() : string</li><li>Php : public function getText() </li></ul><a name="refoperation133250"></a>
+<table><tr><td><div class="element">Operation <b>setText</b></div></td></tr></table><p>Set the content of the current text<br />@return ${type}<br />@param String $text the new content<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + setText(inout text : String) : void</li><li>Php : public function setText($text) </li></ul><a name="refoperation133378"></a>
+<table><tr><td><div class="element">Operation <b>setSelectionStart</b></div></td></tr></table><p>Set the begining of the selection<br />@return ${type}<br />@param int $val the begining of the selection<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + setSelectionStart(inout val : int) : void</li><li>Php : public function setSelectionStart($val) </li></ul><a name="refoperation133506"></a>
+<table><tr><td><div class="element">Operation <b>setSelectionEnd</b></div></td></tr></table><p>Set the end of the selection<br />@return ${type}<br />@param int $val the end of the selection<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + setSelectionEnd(inout val : int) : void</li><li>Php : public function setSelectionEnd($val) </li></ul><a name="refoperation133634"></a>
+<table><tr><td><div class="element">Operation <b>updateSelection</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + updateSelection(inout selStart : int, inout selEnd : int) : </li><li>Php : public function updateSelection($selStart, $selEnd) </li></ul><a name="refoperation133762"></a>
+<table><tr><td><div class="element">Operation <b>insert</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + insert() : </li><li>Php : public function insert() </li></ul><a name="refoperation133890"></a>
+<table><tr><td><div class="element">Operation <b>copy</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + copy() : void</li><li>Php : public function copy() </li></ul><a name="refoperation134018"></a>
+<table><tr><td><div class="element">Operation <b>cut</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + cut() : void</li><li>Php : public function cut() </li></ul><a name="refoperation134146"></a>
+<table><tr><td><div class="element">Operation <b>paste</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + paste() : void</li><li>Php : public function paste() </li></ul><a name="refoperation134274"></a>
+<table><tr><td><div class="element">Operation <b>attach</b></div></td></tr></table><p>Attach an observer to this concrete subject<br />@return ${type}<br />@param Observer $o the observer of this concrete subject<br /><br /></p><p>Declaration :</p><ul><li>Uml : + attach(inout o : Observer) : void</li><li>Php : public function attach(&amp; $o) </li></ul><a name="refoperation134402"></a>
+<table><tr><td><div class="element">Operation <b>detach</b></div></td></tr></table><p>Observer methods *<br /><br />Detach an observer from this concrete subject<br />@return ${type}<br />@param Observer $o the observer to be detached<br /><br /></p><p>Declaration :</p><ul><li>Uml : + detach(inout o : Observer) : void</li><li>Php : public function detach(&amp; $o) </li></ul><a name="refoperation134530"></a>
+<table><tr><td><div class="element">Operation <b>notify</b></div></td></tr></table><p>Notify the observers of this concrete subject<br />@return ${type}<br />@access public <br /><br /></p><p>Declaration :</p><ul><li>Uml : + notify() : void</li><li>Php : public function notify() </li></ul><a name="refoperation134658"></a>
+<table><tr><td><div class="element">Operation <b>update</b></div></td></tr></table><p>Subject methods *<br /></p><p>Declaration :</p><ul><li>Uml : + update(inout s : ) : void</li><li>Php : public function update(&amp; $s) </li></ul><a name="refrelation129410"></a>
+<table><tr><td><div class="element">Relation <b>&lt;directional aggregation&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class128514.html#refclass128514"><b>Command</b></a></li><li>Php : private $</li></ul><a name="refoperation160642"></a>
+<table><tr><td><div class="element">Operation <b>replay</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + replay() : void</li><li>Php : public function replay() </li></ul><a name="refoperation160770"></a>
+<table><tr><td><div class="element">Operation <b>undo</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + undo() : void</li><li>Php : public function undo() </li></ul><a name="refoperation160898"></a>
+<table><tr><td><div class="element">Operation <b>redo</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + redo() : void</li><li>Php : public function redo() </li></ul><a name="refoperation161026"></a>
+<table><tr><td><div class="element">Operation <b>canReplay</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + canReplay() : bool</li><li>Php : public function canReplay() </li></ul><a name="refoperation161154"></a>
+<table><tr><td><div class="element">Operation <b>canUndo</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + canUndo() : bool</li><li>Php : public function canUndo() </li></ul><a name="refoperation161282"></a>
+<table><tr><td><div class="element">Operation <b>reset</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + reset() : void</li><li>Php : public function reset() </li></ul></div>
+<p>All public operations : <a href="class129154.html#refoperation132482"><b>__construct</b></a> , <a href="class129154.html#refoperation134274"><b>attach</b></a> , <a href="class128258.html#refoperation135938"><b>attach</b></a> , <a href="class129154.html#refoperation161026"><b>canReplay</b></a> , <a href="class129154.html#refoperation161154"><b>canUndo</b></a> , <a href="class129154.html#refoperation133890"><b>copy</b></a> , <a href="class129154.html#refoperation134018"><b>cut</b></a> , <a href="class129154.html#refoperation134402"><b>detach</b></a> , <a href="class128258.html#refoperation136066"><b>detach</b></a> , <a href="class129154.html#refoperation132610"><b>getChar</b></a> , <a href="class129154.html#refoperation132994"><b>getSelectionEnd</b></a> , <a href="class129154.html#refoperation132866"><b>getSelectionStart</b></a> , <a href="class129154.html#refoperation133122"><b>getText</b></a> , <a href="class129154.html#refoperation133762"><b>insert</b></a> , <a href="class129154.html#refoperation134530"><b>notify</b></a> , <a href="class129154.html#refoperation134146"><b>paste</b></a> , <a href="class129154.html#refoperation160898"><b>redo</b></a> , <a href="class129154.html#refoperation160642"><b>replay</b></a> , <a href="class129154.html#refoperation161282"><b>reset</b></a> , <a href="class129154.html#refoperation132738"><b>setChar</b></a> , <a href="class129154.html#refoperation133506"><b>setSelectionEnd</b></a> , <a href="class129154.html#refoperation133378"><b>setSelectionStart</b></a> , <a href="class129154.html#refoperation133250"><b>setText</b></a> , <a href="class129154.html#refoperation160770"><b>undo</b></a> , <a href="class129154.html#refoperation134658"><b>update</b></a> , <a href="class128130.html#refoperation135042"><b>update</b></a> , <a href="class129154.html#refoperation133634"><b>updateSelection</b></a> </p>
+</body>
+</html>

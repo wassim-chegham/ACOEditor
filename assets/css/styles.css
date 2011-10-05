@@ -1,0 +1,99 @@
+body{
+   background-color:#80bde9;
+}
+
+#content {
+	width:900px;
+	left:-450px;
+	margin-left:50%;
+	position:relative;
+	-moz-border-radius:5px;
+	-webkit-borrder-radius: 5px;
+	padding:10px;
+	-moz-box-shadow:0 0 19px #000000;
+	-webkit-box-shadow:0 0 19px #000000;
+	position:absolute;
+	top:-500px;
+}
+
+h1 {
+	padding:3px;
+}
+
+#pre {
+   background-color:#000; 
+   color:#fff; 
+   font-size:10px;
+   overflow:auto;
+   max-height:400px;
+   padding:10px;
+}
+
+textarea, textarea:disabled {
+  border:1px solid #aaa;
+  height:100%;
+  width:100%;
+  padding:5px;
+	color:#000;
+}
+
+button {
+	outline:none;
+	border: 1px solid #aaa;
+	background-color:#fff !important;
+	background-repeat: no-repeat;
+	background-position:  5px center;
+	padding:3px 3px 3px 20px;
+	-moz-border-radius:5px;
+	-webkit-borrder-radius: 5px;
+}
+
+button:hover:not(:disabled) {
+	background-color:#80bde9 !important;
+	color:#fff;
+	border: 1px solid #007dff;
+		cursor:pointer;
+}
+
+#new {
+	background-image:url('../img/new.png');
+}
+#cut {
+	background-image:url('../img/cut.png');
+}
+#copy {
+	background-image:url('../img/copy.png');
+}
+#paste {
+	background-image:url('../img/paste.png');
+}
+#undo {
+	background-image:url('../img/undo.png');
+}
+#redo {
+	background-image:url('../img/redo.png');
+}
+#replay {
+	background-image:url('../img/play.png');
+}
+#replay.playing {
+	background-image:url('../img/stop.png');
+}
+#dump {
+	background-image:url('../img/information.png');
+}
+
+fieldset {
+	margin:2px;
+	border:1px solid #aaa;
+}
+
+fieldset:first-child {
+	float:right;
+	width:100px;
+	padding:9px;
+}
+
+fieldset:last-child {
+	clear:both;
+}

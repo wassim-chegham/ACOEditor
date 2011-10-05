@@ -1,0 +1,221 @@
+format 74
+
+classcanvas 128386 class_ref 129282 // Insert
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 205.94 796.78 2011
+end
+classcanvas 128642 class_ref 128898 // Copy
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 216.658 257.489 2006
+end
+classcanvas 128898 class_ref 128514 // Command
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 9.626 474.615 2000
+end
+classcanvas 129154 class_ref 129026 // Cut
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 213.507 4.868 2006
+end
+classcanvas 129282 class_ref 129410 // Paste
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 222.194 532.689 2006
+end
+classcanvas 136066 class_ref 136066 // InsertSave
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 212.62 975.856 2000
+end
+classcanvas 136194 class_ref 136194 // PasteSave
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 217.851 647.535 2000
+end
+classcanvas 136322 class_ref 136322 // CutSave
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 217.082 116.855 2000
+end
+classcanvas 136450 class_ref 136450 // CopySave
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color yellow
+  xyz 220.595 379.838 2000
+end
+classcanvas 140290 class_ref 128770 // Memento
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color blue
+  xyz 535.751 658.638 2000
+end
+classcanvas 140418 class_ref 136578 // Caretaker
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color mediumblue
+  xyz 650.084 582.038 2000
+end
+classcanvas 143874 class_ref 136706 // ConcreteMementoInsert
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color lightmediumblue
+  xyz 480.656 918.568 2000
+end
+classcanvas 151938 class_ref 136834 // ConcreteMementoCutCopyPaste
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  color lightmediumblue
+  xyz 518.36 330.68 2000
+end
+note 156162 "MEMENTO"
+  color white  xyzwh 422.3 580.3 2000 84 36
+note 156418 "Originator"
+  color white  xyzwh 312.9 382.7 2016 73 36
+note 156546 "Originator"
+  color white  xyzwh 299.8 977.6 2016 73 36
+note 156674 "Originator"
+  color white  xyzwh 307.3 651.3 2016 73 36
+note 156802 "Originator"
+  color white  xyzwh 310 122.1 2016 73 36
+note 156930 "ConcreteMemento"
+  color white  xyzwh 662 350.9 2016 113 36
+note 157058 "ConcreteMemento"
+  color white  xyzwh 644.8 925.3 2016 113 36
+relationcanvas 136578 relation_ref 136322 // <unidirectional association>
+  decenter_begin 393
+  decenter_end 216
+  from ref 136066 z 2012 to ref 128386
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136706 relation_ref 136450 // <unidirectional association>
+  decenter_begin 509
+  decenter_end 337
+  from ref 136194 z 2007 to ref 129282
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 136962 relation_ref 136706 // <unidirectional association>
+  decenter_begin 805
+  decenter_end 605
+  from ref 136450 z 2007 to ref 128642
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 140546 relation_ref 137474 // <association>
+  decenter_begin 194
+  decenter_end 310
+  from ref 140290 z 2001 to ref 140418
+  no_role_a no_role_b
+  multiplicity_a_pos 637 655 3000 multiplicity_b_pos 636 673 3000
+end
+relationcanvas 143362 relation_ref 137730 // <association>
+  decenter_begin 569
+  decenter_end 549
+  from ref 136066 z 2001 to point 323 1136.8
+  line 145154 z 2001 to point 323 1136.8
+  line 151554 z 2001 to point 751.8 1136.8
+  line 145282 z 2001 to ref 140418
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143618 relation_ref 137986 // <association>
+  decenter_begin 935
+  decenter_end 500
+  from ref 136450 z 2001 to point 330.2 520.2
+  line 144386 z 2001 to point 741.8 520.2
+  line 144514 z 2001 to ref 140418
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143746 relation_ref 138114 // <association>
+  decenter_begin 559
+  decenter_end 873
+  from ref 136322 z 2001 to point 803 190.2
+  line 153090 z 2001 to ref 140418
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 152450 relation_ref 152194 // <realization>
+  from ref 151938 z 2001 to ref 140290
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 152962 relation_ref 152322 // <realization>
+  from ref 143874 z 2001 to ref 140290
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 153346 relation_ref 160898 // <association>
+  decenter_begin 745
+  decenter_end 736
+  from ref 136194 z 2001 to ref 140418
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 153474 relation_ref 128514 // <realization>
+  from ref 129154 z 2007 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 153602 relation_ref 128898 // <realization>
+  from ref 128386 z 2012 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 153858 relation_ref 145410 // <realization>
+  from ref 136450 z 2001 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 154114 relation_ref 145154 // <realization>
+  from ref 136066 z 2001 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 154370 relation_ref 152706 // <unidirectional association>
+  decenter_begin 582
+  from ref 143874 z 2001 to ref 136066
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 154626 relation_ref 145538 // <realization>
+  from ref 136322 z 2001 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 154754 relation_ref 128386 // <realization>
+  from ref 128642 z 2007 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 155138 relation_ref 145282 // <realization>
+  from ref 136194 z 2001 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 155266 relation_ref 129026 // <realization>
+  from ref 129282 z 2007 to ref 128898
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 155394 relation_ref 161026 // <unidirectional association>
+  from ref 136322 z 2007 to ref 129154
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 157186 -_-_
+  from ref 156802 z 2017 to ref 156162
+line 157314 -_-_
+  from ref 156418 z 2017 to ref 156162
+line 157442 -_-_
+  from ref 156674 z 2017 to ref 156162
+line 157570 -_-_
+  from ref 156546 z 2017 to ref 156162
+line 157698 -_-_
+  from ref 157058 z 2017 to ref 156162
+line 157954 -_-_
+  from ref 156930 z 2017 to ref 156162
+line 158210 -_-_
+  from ref 140290 z 2001 to ref 156162
+line 158722 -_-_ decenter_begin 239 decenter_end 112
+  from ref 156162 z 2001 to ref 140418
+end

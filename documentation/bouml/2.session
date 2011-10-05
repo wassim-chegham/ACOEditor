@@ -1,0 +1,27 @@
+window_sizes 1280 727 244 1030 653 0
+diagrams
+  sequencediagram_ref 163586 // v2 Replay sequence
+    1190 745 100 3 0 18
+  sequencediagram_ref 142722 // v2 Save Sequence Insert
+    952 596 100 3 0 0
+  classdiagram_ref 136194 // v3
+    950 592 68 4 0 0
+  sequencediagram_ref 156290 // v3 SaveSequenceInsert
+    950 592 100 3 0 0
+  sequencediagram_ref 156034 // V3 undo
+    1188 740 100 3 0 0
+  sequencediagram_ref 156418 // V3 Redo
+    950 592 100 3 0 0
+  active  classdiagram_ref 163202 // v1Command
+    1030 653 100 4 120 0
+end
+show_stereotypes
+selected classdiagram_ref 163202 // v1Command
+open
+  class_ref 129282 // Insert
+  class_ref 136578 // Caretaker
+  class_ref 128770 // Memento
+  class_ref 150146 // Replay
+  class_ref 143618 // d
+end
+end

@@ -1,0 +1,138 @@
+format 74
+
+classinstance 128386 class_ref 136578 // Caretaker
+ color mediumgreen  name ""   xyz 817.8 11 2000 life_line_z 2010
+note 128514 "Command insertSave"
+  color yellow  xyzwh 5.9 51.3 0 875 505
+note 128770 "Observer"
+  xyzwh 53.7 420.9 2000 357 81
+classinstance 129026 class_ref 128002 // Buffer
+  name ""   xyz 243.7 5 2000 life_line_z 2010
+classinstance 131586 class_ref 136834 // ConcreteMementoCutCopyPaste
+ color mediumgreen  name "m"   xyz 636.2 185 2010 life_line_z 2010
+note 132738 "Memento"
+  color green  xyzwh 491 109 2000 377 211
+classinstance 138882 class_ref 129282 // Insert
+  name "insert"   xyz 403 4 2005 life_line_z 2000
+classinstance 139522 class_ref 129154 // Ihm
+  name ""   xyz 118 4 2005 life_line_z 2000
+classinstance 140034 class_ref 136066 // InsertSave
+  name "insertSave"   xyz 506 4 2025 life_line_z 2000
+note 146306 "Command insert"
+  color mediumyellow  xyzwh 21.4 326.8 0 577 219
+durationcanvas 129154 classinstance_ref 129026 // :Buffer
+  color mediumyellow
+  xyzwh 262 400 2020 11 128
+  overlappingdurationcanvas 144002
+    xyzwh 268 404 2030 11 93
+    overlappingdurationcanvas 144258
+      xyzwh 274 445 2040 11 36
+    end
+  end
+end
+durationcanvas 140802 classinstance_ref 139522 // :Ihm
+  xyzwh 137 70 2010 11 467
+  overlappingdurationcanvas 142466
+    xyzwh 143 354 2020 11 178
+    overlappingdurationcanvas 144770
+      xyzwh 149 451 2030 11 46
+    end
+  end
+end
+durationcanvas 140930 classinstance_ref 140034 // insertSave:InsertSave
+  xyzwh 566 71 2010 11 454
+  overlappingdurationcanvas 145410
+    xyzwh 572 169 2020 11 131
+  end
+end
+durationcanvas 142210 classinstance_ref 138882 // insert:Insert
+  xyzwh 435 338 2010 11 173
+  overlappingdurationcanvas 142978
+    xyzwh 441 364 2020 11 123
+  end
+end
+durationcanvas 145154 classinstance_ref 128386 // :Caretaker
+  xyzwh 846 144 2020 11 171
+  overlappingdurationcanvas 146050
+    xyzwh 852 284 2030 11 25
+  end
+end
+durationcanvas 145666 classinstance_ref 131586 // m:ConcreteMementoCutCopyPaste
+  xyzwh 733 235 2020 11 34
+end
+msg 141058 asynchronous
+  from durationcanvas_ref 140802
+  to durationcanvas_ref 140930
+  yz 71 2025 msg operation_ref 142594 // "execute()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 354 55
+msg 142338 synchronous
+  from durationcanvas_ref 140930
+  to durationcanvas_ref 142210
+  yz 339 2030 msg operation_ref 134914 // "execute() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 493 323
+msg 142594 synchronous
+  from durationcanvas_ref 142210
+  to durationcanvas_ref 142466
+  yz 354 2035 msg operation_ref 132610 // "getChar() : char"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 277 338
+msg 143106 synchronous
+  from durationcanvas_ref 142466
+  to durationcanvas_ref 142978
+  yz 376 2040 explicitmsg "c"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 303 360
+msg 144130 synchronous
+  from durationcanvas_ref 142978
+  to durationcanvas_ref 144002
+  yz 407 2035 explicitmsg "insert(c)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 308 391
+reflexivemsg 144386 synchronous
+  to durationcanvas_ref 144258
+  yz 445 2045 msg operation_ref 130050 // "notify() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 297 455
+msg 144898 asynchronous
+  from durationcanvas_ref 144258
+  to durationcanvas_ref 144770
+  yz 463 2045 explicitmsg "update(this)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 181 448
+msg 145026 return
+  from durationcanvas_ref 129154
+  to durationcanvas_ref 140930
+  yz 513 2035 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 145282 synchronous
+  from durationcanvas_ref 140930
+  to durationcanvas_ref 145154
+  yz 144 2040 explicitmsg "save(insertSave)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 735 133
+msg 145538 synchronous
+  from durationcanvas_ref 145154
+  to durationcanvas_ref 145410
+  yz 169 2025 explicitmsg "getMemento()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 705 156
+msg 145794 synchronous
+  from durationcanvas_ref 145410
+  to durationcanvas_ref 145666
+  yz 236 2025 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 681 224
+msg 145922 return
+  from durationcanvas_ref 145666
+  to durationcanvas_ref 145410
+  yz 252 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 146178 synchronous
+  from durationcanvas_ref 145410
+  to durationcanvas_ref 146050
+  yz 284 2035 explicitmsg "m"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 818 270
+end

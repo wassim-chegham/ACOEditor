@@ -1,0 +1,3797 @@
+format 74
+"patterns" // patterns
+  revision 13
+  modified_by 2 "border"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  deploymentview 128002 "patterns"
+    //deployment diagram settings
+    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    artifact 128002 "Buffer"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * This class represents a buffer, which contains a temporary text content;
+ * This is also the concrete subject of the Obsever Design Pattern
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+require_once (BINPATH . 'Observer.php');
+require_once (BINPATH . 'Subject.php');
+require_once (BINPATH . 'Clipboard.php');
+require_once (BINPATH . 'Ihm.php');
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 128002 // Buffer
+      end
+    end
+
+    artifact 128130 "Clipboard"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>"
+      associated_classes
+	class_ref 128386 // Clipboard
+      end
+    end
+
+    artifact 128258 "Command"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>"
+      associated_classes
+	class_ref 128514 // Command
+      end
+    end
+
+    artifact 128386 "ConcreteMemento"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+
+/**
+ * The ConcreteMemento should be used only in the Originator
+ * (and in testing).
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Memento
+ * @package memento
+ * @version 0.1
+ */
+
+require_once (BINPATH . 'Memento.php');
+
+${definition}
+
+
+
+
+?>"
+      associated_classes
+      end
+    end
+
+    artifact 128514 "Copy"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+/**
+ * The copy command
+ * 
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+
+require_once ('Command.php');
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 128898 // Copy
+      end
+    end
+
+    artifact 128642 "Cut"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+/**
+ * The cut command
+ * 
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+
+require_once ('Command.php');
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129026 // Cut
+      end
+    end
+
+    artifact 128770 "Ihm"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * The Ihm Observer
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Observer
+ * @package observer
+ * @version 0.1
+ */
+require_once ('Observer.php');
+require_once ('Subject.php');
+require_once ('Insert.php');
+require_once ('Copy.php');
+require_once ('Cut.php');
+require_once ('Paste.php');
+
+${definition}
+
+
+
+?>
+"
+      associated_classes
+      end
+    end
+
+    artifact 128898 "Insert"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * The InsertChar command
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+
+require_once ('Command.php');
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129282 // Insert
+      end
+    end
+
+    artifact 129026 "Memento"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+
+?>"
+      associated_classes
+	class_ref 128770 // Memento
+      end
+    end
+
+    artifact 129154 "Observer"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 128130 // Observer
+      end
+    end
+
+    artifact 129282 "Paste"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ */
+
+/**
+ * The paste command
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+require_once ('Command.php');
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 129410 // Paste
+      end
+    end
+
+    artifact 129410 "Session"
+      stereotype "source"
+      php_src "<?php
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+
+/**
+ * This class represents the main entry of the application
+ *
+ * @author wassim Chegham & hugo Marchadour
+ * @category Command
+ * @package command
+ * @version 0.1
+ */
+
+//require_once (BINPATH . 'ConcreteMemento.php');
+require_once (BINPATH . 'Ihm.php');
+require_once (BINPATH . 'Buffer.php');
+${definition}
+
+
+
+/**/
+function &getInstance()
+{
+	$c = \"Session\";//get_class($o);
+	if ( !isset($_SESSION[ $c ]) ) 
+	{
+		$o =& Session::getInstance();
+		$_SESSION[ $c ] =& $o;
+	}
+	return $_SESSION[ $c ];
+}
+
+?>
+"
+      associated_classes
+	class_ref 129538 // Session
+      end
+    end
+
+    artifact 129538 "Subject"
+      stereotype "source"
+      php_src "<?php
+${definition}
+
+
+
+?>
+"
+      associated_classes
+	class_ref 128258 // Subject
+      end
+    end
+  end
+
+  classview 128002 "patterns"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    class 129154 "Ihm"
+      visibility protected 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128642 // <realization>
+	relation 128642 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128642 // <realization>
+	  b parent class_ref 128130 // Observer
+      end
+
+      classrelation 128770 // <realization>
+	relation 128770 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128770 // <realization>
+	  b parent class_ref 128258 // Subject
+      end
+
+      attribute 130050 "_text"
+	private explicit_type "_text"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The content of the current text
+@var ${type}
+@access ${visibility}
+@type String
+"
+      end
+
+      attribute 130178 "_selectionStart"
+	private explicit_type "_selectionStart"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The begining of a selection.
+@var ${type}
+@access ${visibility}
+@type Integer
+"
+      end
+
+      attribute 130306 "_selectionEnd"
+	private explicit_type "_selectionEnd"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The end of a selection
+@var ${type}
+@access ${visibility}
+@type Integer
+"
+      end
+
+      attribute 130434 "_clipboard"
+	private explicit_type "_clipboard"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The clipboard object
+@var ${type}
+@access ${visibility}
+@type Clipboard
+"
+      end
+
+      attribute 130562 "_observers"
+	private explicit_type "_observers"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The array who contains all observers
+@var ${type}
+@access ${visibility}
+@type array observer
+"
+      end
+
+      attribute 130690 "_current_char"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+"
+      end
+
+      attribute 130818 "_commands"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+"
+      end
+
+      operation 132482 "__construct"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "buffer" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+"
+      end
+
+      operation 132610 "getChar"
+	public explicit_return_type "char"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132738 "setChar"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "char" explicit_type "char"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 132866 "getSelectionStart"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get the begining of the selection
+@return ${type} the position of the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 132994 "getSelectionEnd"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the end of the selection
+@return ${type} the position of the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 133122 "getText"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get the current text
+@return ${type} current text
+@access ${visibility}
+"
+      end
+
+      operation 133250 "setText"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "text" explicit_type "String"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the content of the current text
+@return ${type}
+@param ${t0} ${p0} the new content
+@access ${visibility}
+"
+      end
+
+      operation 133378 "setSelectionStart"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "val" explicit_type "int"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the begining of the selection
+@return ${type}
+@param ${t0} ${p0} the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 133506 "setSelectionEnd"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "val" explicit_type "int"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the end of the selection
+@return ${type}
+@param ${t0} ${p0} the end of the selection
+@access ${visibility}
+"
+      end
+
+      operation 133634 "updateSelection"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "selStart" explicit_type "int"
+	  param inout name "selEnd" explicit_type "int"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133762 "insert"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 133890 "copy"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134018 "cut"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134146 "paste"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134274 "attach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Attach an observer to this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer of this concrete subject
+"
+      end
+
+      operation 134402 "detach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "  Observer methods *
+
+Detach an observer from this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer to be detached
+"
+      end
+
+      operation 134530 "notify"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Notify the observers of this concrete subject
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 134658 "update"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "s" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "  Subject methods *"
+      end
+
+      classrelation 129410 // <directional aggregation>
+	relation 129282 o-->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129410 // <directional aggregation>
+	  b parent class_ref 128514 // Command
+      end
+
+      operation 160642 "replay"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160770 "undo"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 160898 "redo"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 161026 "canReplay"
+	public explicit_return_type "bool"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 161154 "canUndo"
+	public explicit_return_type "bool"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 161282 "reset"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128002 "Buffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128002 // <realization>
+	relation 128002 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128002 // <realization>
+	  b parent class_ref 128130 // Observer
+      end
+
+      classrelation 128130 // <realization>
+	relation 128130 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128130 // <realization>
+	  b parent class_ref 128258 // Subject
+      end
+
+      attribute 128258 "_text"
+	private explicit_type "_text"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The content of the current text
+@var ${type}
+@access ${visibility}
+@type String
+"
+      end
+
+      attribute 128386 "_selectionStart"
+	private explicit_type "_selectionStart"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The begining of a selection.
+@var ${type}
+@access ${visibility}
+@type Integer
+"
+      end
+
+      attribute 128514 "_selectionEnd"
+	private explicit_type "_selectionEnd"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The end of a selection
+@var ${type}
+@access ${visibility}
+@type Integer
+"
+      end
+
+      attribute 128642 "_clipboard"
+	private explicit_type "_clipboard"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The clipboard object
+@var ${type}
+@access ${visibility}
+@type Clipboard
+"
+      end
+
+      attribute 128770 "_observers"
+	private explicit_type "_observers"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+The array who contains all observers
+@var ${type}
+@access ${visibility}
+@type array observer
+"
+      end
+
+      operation 128002 "__construct"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+"
+      end
+
+      operation 128130 "getText"
+	public explicit_return_type "the"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get the current text
+@return ${type} current text
+@access ${visibility}
+"
+      end
+
+      operation 128258 "setText"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "text" explicit_type "String"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the content of the current text
+@return ${type}
+@param ${t0} ${p0} the new content
+@access ${visibility}
+"
+      end
+
+      operation 128386 "getSelectionStart"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get the begining of the selection
+@return ${type} the position of the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 128514 "getSelectionEnd"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the end of the selection
+@return ${type} the position of the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 128642 "setSelectionStart"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "val" explicit_type "Integer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the begining of the selection
+@return ${type}
+@param ${t0} ${p0} the begining of the selection
+@access ${visibility}
+"
+      end
+
+      operation 128770 "setSelectionEnd"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "val" explicit_type "Integer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the end of the selection
+@return ${type}
+@param ${t0} ${p0} the end of the selection
+@access ${visibility}
+"
+      end
+
+      operation 128898 "setSelection"
+	public explicit_return_type "void"
+	nparams 2
+	  param inout name "start" explicit_type "Integer"
+	  param inout name "end" explicit_type "Integer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the begining and the end of the selection
+@return ${type}
+@param ${t0} ${p0} the begining of the selection
+@param ${t1} ${p1} the end of the selection
+"
+      end
+
+      operation 129026 "insert"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "char" explicit_type "char"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Insert a character into the buffer
+@return ${type}
+@param ${t0} ${p0} the character to be inserted
+"
+      end
+
+      operation 129154 "setTextIntoClipBoard"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "text" explicit_type "string"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set a text content into the clipboard
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 129282 "getTextFromClipBoard"
+	public explicit_return_type "String"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get a text content from the clipboard
+@return ${type} the text content from the clipboard
+"
+      end
+
+      operation 129410 "copyText"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment " Command methods *
+
+Copy the current selection into clipboard
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 129538 "cutText"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Cut the current selection into clipboard
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 129666 "pasteText"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Paste the content of the clipboard into the buffer
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 129794 "attach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "  Observer methods *
+
+Attach an observer to this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer of this concrete subject
+"
+      end
+
+      operation 129922 "detach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Detach an observer from this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer to be detached
+"
+      end
+
+      operation 130050 "notify"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Notify the observers of this concrete subject
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 130178 "update"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "s" explicit_type ""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "  Subject methods *"
+      end
+
+      operation 130306 "_substr"
+	class_operation private explicit_return_type ""
+	nparams 3
+	  param inout name "str" explicit_type "unknown_type"
+	  param inout name "selStart" explicit_type "unknown_type"
+	  param inout name "selEnd" explicit_type "unknown_type"
+	    defaultvalue "-1"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+
+@param ${t0} ${p0}
+@param ${t1} ${p1}
+@param ${t2} ${p2}
+"
+      end
+
+      classrelation 129154 // <association>
+	relation 129154 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129154 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129282 // <association>
+      end
+
+      classrelation 153730 // <association>
+	relation_ref 152450 // <association>
+      end
+
+      operation 151682 "setMemento"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "m" type class_ref 128770 // Memento
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 151810 "getMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128386 "Clipboard"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+This class represents a clipboard
+
+@author wassim Chegham & hugo Marchadour
+@category Command
+@package command
+@version 0.1
+"
+      attribute 128898 "_text"
+	private explicit_type "_text"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} the current text content
+@access ${visibility}
+@type String
+"
+      end
+
+      operation 130434 "__construct"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "str" explicit_type ""
+	    defaultvalue "\"\""
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor
+@return ${type}
+"
+      end
+
+      operation 130562 "setText"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "str" explicit_type "String"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Set the current text
+@return ${type}
+@param ${t0} ${p0} the new text content
+"
+      end
+
+      operation 130690 "getText"
+	public explicit_return_type "the"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Get the current text content
+@return ${type} current text
+"
+      end
+
+      classrelation 129282 // <association>
+	relation_ref 129154 // <association>
+      end
+    end
+
+    class 128130 "Observer"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${visibility}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+The Observer interface
+
+@author wassim Chegham & hugo Marchadour
+@category Observer
+@package observer
+@version 0.1
+"
+      operation 135042 "update"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "s" explicit_type ""
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+
+@return 
+"
+      end
+    end
+
+    class 128258 "Subject"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${visibility}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+The Subject interface
+
+@author wassim Chegham & hugo Marchadour
+@category Observer
+@package observer
+@version 0.1
+"
+      operation 135938 "attach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Attach an observer to this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer of this concrete subject
+"
+      end
+
+      operation 136066 "detach"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "o" explicit_type "Observer"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Detach an observer from this concrete subject
+@return ${type}
+@param ${t0} ${p0} the observer to be detached
+"
+      end
+    end
+
+    class 128514 "Command"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${visibility}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+The command interface
+
+@author wassim Chegham & hugo Marchadour
+@category Command
+@package command
+@version 0.1
+"
+      operation 130818 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+
+@return 
+"
+      end
+
+      classrelation 129538 // <unidirectional association>
+	relation 129410 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129538 // <unidirectional association>
+	  b parent class_ref 128002 // Buffer
+      end
+    end
+
+    class 128898 "Copy"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128386 // <realization>
+	relation 128386 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128386 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      attribute 129538 "_receiver"
+	protected explicit_type "the"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} object receiver that 
+@access ${visibility}
+@type Buffer
+"
+      end
+
+      operation 131970 "__construct"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "receiver" explicit_type "Buffer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+@param ${t0} ${p0} the object receiver
+@access ${visibility}
+"
+      end
+
+      operation 132098 "execute"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Perfome the copy action
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 161410 "getReceiver"
+	public return_type class_ref 128002 // Buffer
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129026 "Cut"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128514 // <realization>
+	relation 128514 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128514 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      attribute 129666 "_receiver"
+	protected explicit_type "the"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} object receiver that 
+@access ${visibility}
+@type Buffer
+"
+      end
+
+      operation 132226 "__construct"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "receiver" explicit_type "Buffer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+@param ${t0} ${p0} the object receiver
+@access ${visibility}
+"
+      end
+
+      operation 132354 "execute"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Perfome the cut action
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 161538 "getReceiver"
+	public return_type class_ref 128002 // Buffer
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129282 "Insert"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128898 // <realization>
+	relation 128898 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 128898 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      attribute 130946 "_receiver"
+	protected explicit_type "the"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} object receiver that
+@access ${visibility}
+@type Buffer
+"
+      end
+
+      attribute 131074 "_sender"
+	protected explicit_type "the"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} object receiver that
+@access ${visibility}
+@type Buffer
+"
+      end
+
+      attribute 131714 "_current_char"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 134786 "__construct"
+	public explicit_return_type "void"
+	nparams 2
+	  param inout name "sender" explicit_type ""
+	  param inout name "receiver" explicit_type "Buffer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}& ${p0}${v0}, & ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+@param ${t1} ${p1} the object receiver
+@access ${visibility}
+"
+      end
+
+      operation 134914 "execute"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Perfome the copy action
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      classrelation 129666 // <unidirectional association>
+	relation 129538 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129666 // <unidirectional association>
+	  b parent class_ref 129154 // Ihm
+      end
+
+      classrelation 129922 // <unidirectional association>
+	relation 129666 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129922 // <unidirectional association>
+	  b parent class_ref 129154 // Ihm
+      end
+
+      classrelation 130178 // <unidirectional association>
+	relation 129794 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130178 // <unidirectional association>
+	  b parent class_ref 129154 // Ihm
+      end
+
+      operation 161666 "getReiver"
+	public return_type class_ref 128002 // Buffer
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 161794 "getSender"
+	public return_type class_ref 129154 // Ihm
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129410 "Paste"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 129026 // <realization>
+	relation 129026 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 129026 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      attribute 131842 "_receiver"
+	protected explicit_type "the"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} object receiver that 
+@access ${visibility}
+@type Buffer
+"
+      end
+
+      operation 135170 "__construct"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "receiver" explicit_type "Buffer"
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}& ${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+@param ${t0} ${p0} the object receiver of this command
+@param ${t1} $action the action to be performed
+@access ${visibility}
+"
+      end
+
+      operation 135298 "execute"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Perfome the paste action
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 161922 "getReceiver"
+	public return_type class_ref 128002 // Buffer
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 129538 "Session"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 131970 "ihm"
+	public explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132098 "_instance"
+	class_attribute private explicit_type "represents"
+	init_value " null"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	comment "
+@var ${type} the instance of the current object
+@access ${visibility}
+@type Session
+"
+      end
+
+      operation 135426 "__construct"
+	private explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${visibility}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+The constructor of the class
+@return ${type}
+"
+      end
+
+      operation 135554 "__destruct"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Save the current objet into session
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 135682 "__clone"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Object cloning is forbidden!
+@return ${type}
+@access ${visibility}
+"
+      end
+
+      operation 135810 "getInstance"
+	class_operation public explicit_return_type "the"
+	nparams 0
+	
+	
+	preserve_php_body_indent php_def "  ${comment}${final}${visibility}${abstract}${static}function &${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+	comment "
+Singleton Pattern: keep a single instance of the current object
+@return ${type} instance of the current object
+@access ${visibility}
+"
+      end
+    end
+
+    class 136066 "InsertSave"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 142594 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 136706 // <unidirectional association>
+	relation 136322 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 136706 // <unidirectional association>
+	  b parent class_ref 129282 // Insert
+      end
+
+      classrelation 138370 // <association>
+	relation 137730 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138370 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138498 // <association>
+      end
+
+      classrelation 146306 // <realization>
+	relation 145154 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 146306 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      operation 149506 "getMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149762 "setMemento"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "m" type class_ref 128770 // Memento
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 147842 "_insert"
+	private type class_ref 129282 // Insert
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 147970 "_cartaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 162050 "getCommand"
+	public return_type class_ref 129282 // Insert
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 136194 "PasteSave"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 142722 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 136834 // <unidirectional association>
+	relation 136450 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 136834 // <unidirectional association>
+	  b parent class_ref 129410 // Paste
+      end
+
+      classrelation 138626 // <association>
+	relation 137858 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138626 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138754 // <association>
+      end
+
+      classrelation 146434 // <realization>
+	relation 145282 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 146434 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      operation 149634 "getMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 149890 "setMemento"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "m" type class_ref 128770 // Memento
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 148098 "_paste"
+	private type class_ref 129410 // Paste
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148226 "_caretaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 162178 "getCommand"
+	public return_type class_ref 129410 // Paste
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 162562 // <association>
+	relation 160898 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 162562 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 162690 // <association>
+      end
+    end
+
+    class 136322 "CutSave"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 142850 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 139138 // <association>
+	relation 138114 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139138 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139266 // <association>
+      end
+
+      classrelation 146690 // <realization>
+	relation 145538 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 146690 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      operation 150274 "getMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 150402 "setMemento"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "m" type class_ref 128770 // Memento
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 148354 "_cut"
+	private type class_ref 129026 // Cut
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148482 "_caretaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 162306 "getCommand"
+	public return_type class_ref 129026 // Cut
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 162818 // <unidirectional association>
+	relation 161026 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 162818 // <unidirectional association>
+	  b parent class_ref 129026 // Cut
+      end
+    end
+
+    class 136450 "CopySave"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 142978 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 137090 // <unidirectional association>
+	relation 136706 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 137090 // <unidirectional association>
+	  b parent class_ref 128898 // Copy
+      end
+
+      classrelation 138882 // <association>
+	relation 137986 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 138882 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 139010 // <association>
+	  association_explicit_type "ConcreteMementoCutCopyPaste"
+      end
+
+      classrelation 146562 // <realization>
+	relation 145410 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 146562 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      operation 150018 "getMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 150146 "setMemento"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "m" type class_ref 128770 // Memento
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 148610 "_copy"
+	private type class_ref 128898 // Copy
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148738 "_caretaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 162434 "getCommand"
+	public return_type class_ref 128898 // Copy
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 136578 "Caretaker"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 162946 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "$buffer" type class_ref 128002 // Buffer
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 137986 // <association>
+	relation_ref 137474 // <association>
+      end
+
+      classrelation 138498 // <association>
+	relation_ref 137730 // <association>
+      end
+
+      classrelation 138754 // <association>
+	relation_ref 137858 // <association>
+      end
+
+      classrelation 139010 // <association>
+	relation_ref 137986 // <association>
+      end
+
+      classrelation 139266 // <association>
+	relation_ref 138114 // <association>
+      end
+
+      operation 151426 "save"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "commandSave" type class_ref 128514 // Command
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 151554 "getNextMemento"
+	public return_type class_ref 128770 // Memento
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 139394 "_mementos"
+	private type class_ref 128770 // Memento
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139522 "_end"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 153602 // <association>
+	relation 152450 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 153602 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 153730 // <association>
+      end
+
+      classrelation 154626 // <association>
+	relation 153346 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 154626 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 154754 // <association>
+      end
+
+      classrelation 154882 // <association>
+	relation 153474 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 154882 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155010 // <association>
+      end
+
+      classrelation 155394 // <association>
+	relation_ref 153730 // <association>
+      end
+
+      attribute 141058 "_buffer"
+	private type class_ref 128002 // Buffer
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 141314 "_current"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 162562 "atTheEnd"
+	public explicit_return_type "bool"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 162690 "getCurrent"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 162818 "resetCurrent"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "current" explicit_type "int"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 162690 // <association>
+	relation_ref 160898 // <association>
+      end
+
+      operation 169986 "decCurrent"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+    end
+
+    class 128770 "Memento"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${visibility}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      comment "
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+This interface is primarily here for type safety,
+specifically to avoid that someone passes to Caretaker's
+methods strings, instead of Memento instances.
+
+@author wassim Chegham & hugo Marchadour
+@category Memento
+@package memento
+@version 0.1
+"
+      classrelation 137858 // <association>
+	relation 137474 ----
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 137858 // <association>
+	  b role_name "" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 137986 // <association>
+      end
+
+      operation 169858 "redo"
+	public explicit_return_type "void"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)};"
+	
+	
+      end
+    end
+
+    class 136706 "ConcreteMementoInsert"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 163330 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "command" type class_ref 129282 // Insert
+	  param in name "attrs" explicit_type "array"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 150530 "getSelectionStart"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 138626 "_char"
+	private explicit_type "char"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138754 "_selectionStart"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 138882 "_selectionEnd"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 150658 "getSelectionEnd"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 150786 "getChar"
+	public explicit_return_type "char"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 153474 // <realization>
+	relation 152322 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 153474 // <realization>
+	  b parent class_ref 128770 // Memento
+      end
+
+      operation 151170 "redo"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 140290 "_saveCommand"
+	private type class_ref 136066 // InsertSave
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 153986 // <unidirectional association>
+	relation 152706 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 153986 // <unidirectional association>
+	  b parent class_ref 136066 // InsertSave
+      end
+    end
+
+    class 136834 "ConcreteMementoCutCopyPaste"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 153346 // <realization>
+	relation 152194 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 153346 // <realization>
+	  b parent class_ref 128770 // Memento
+      end
+
+      attribute 139010 "_selectionStart"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139138 "_selectionEnd"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 163202 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "$command" type class_ref 128514 // Command
+	  param in name "attrs" explicit_type "array"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 150914 "getSelectionStart"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 151042 "getSelectionEnd"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 151298 "redo"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 140418 "_saveCommand"
+	private type class_ref 136194 // PasteSave
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 154114 // <unidirectional association>
+	relation 152834 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 154114 // <unidirectional association>
+	  b parent class_ref 136194 // PasteSave
+      end
+    end
+
+    classinstance 134530 "Insert"
+      type class_ref 129282 // Insert
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 150146 "Replay"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 153090 "__construct"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "careTaker" type class_ref 136578 // Caretaker
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 155138 // <realization>
+	relation 153602 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 155138 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      attribute 140802 "_careTaker"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 155266 // <association>
+	relation 153730 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155266 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155394 // <association>
+      end
+
+      classrelation 155522 // <unidirectional association>
+	relation 153858 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155522 // <unidirectional association>
+	  b parent class_ref 136578 // Caretaker
+      end
+
+      operation 153218 "isDone"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 153602 "initStep"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "step" explicit_type "int"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 153730 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 156034 // <unidirectional association>
+	relation 154370 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 156034 // <unidirectional association>
+	  b parent class_ref 136578 // Caretaker
+      end
+    end
+
+    class 143618 "d"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 156674 "ConcreteMementoBuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 139778 "_text"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 139906 "_textClipboard"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140034 "_selectionStart"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140162 "_selectionEnd"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 140546 "_buffer"
+	private type class_ref 128002 // Buffer
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 163074 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "buffer" type class_ref 128002 // Buffer
+	  param in name "attrs" explicit_type "array"
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 151938 "getText"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152066 "getTextClipboard"
+	public explicit_return_type "string"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152194 "getSelectionStart"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152322 "getSelectionEnd"
+	public explicit_return_type "int"
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152450 "redo"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 153858 // <realization>
+	relation 152578 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 153858 // <realization>
+	  b parent class_ref 128770 // Memento
+      end
+
+      classrelation 154242 // <unidirectional association>
+	relation 152962 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 154242 // <unidirectional association>
+	  b parent class_ref 128002 // Buffer
+      end
+    end
+
+    class 156802 "Undo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 153858 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "replay" type class_ref 150146 // Replay
+	  param in name "caretaker" type class_ref 136578 // Caretaker
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152578 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 154370 // <realization>
+	relation 153090 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 154370 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      classrelation 154754 // <association>
+	relation_ref 153346 // <association>
+      end
+
+      classrelation 155778 // <unidirectional association>
+	relation 154114 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155778 // <unidirectional association>
+	  b parent class_ref 150146 // Replay
+      end
+
+      attribute 148866 "_replay"
+	private type class_ref 150146 // Replay
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 148994 "_caretaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    class 156930 "Redo"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${visibility}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      operation 153986 "__construct"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "replay" type class_ref 150146 // Replay
+	  param inout name "caretaker" type class_ref 136578 // Caretaker
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}function ${name}${(}${p0}${v0}, ${p1}${v1}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 152834 "execute"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 154498 // <realization>
+	relation 153218 -_-|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 154498 // <realization>
+	  b parent class_ref 128514 // Command
+      end
+
+      classrelation 155010 // <association>
+	relation_ref 153474 // <association>
+      end
+
+      classrelation 155650 // <unidirectional association>
+	relation 153986 --->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 155650 // <unidirectional association>
+	  b parent class_ref 150146 // Replay
+      end
+
+      attribute 149122 "_replay"
+	private type class_ref 150146 // Replay
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 149250 "_caretaker"
+	private type class_ref 136578 // Caretaker
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+      end
+    end
+
+    classdiagram 128002 "v1"
+      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 162946 "v1BufferSubject"
+      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 163074 "v1IhmSubject"
+      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 163202 "v1Command"
+      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    sequencediagram 128770 "v1 Insert a new char"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    sequencediagram 128898 "v1 Cut"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    classdiagram 155906 "v2 Command part"
+      draw_all_relations no hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context no show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility yes show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 163330 "v2 Memento"
+      draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context no show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility yes show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    sequencediagram 142722 "v2 Save Sequence Insert"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    sequencediagram 163586 "v2 Replay sequence"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    classdiagram 136194 "v3"
+      draw_all_relations no hide_attributes no hide_operations no hide_getset_operations default show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context no show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode class drawing_language php show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility yes show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    sequencediagram 156290 "v3 SaveSequenceInsert"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    sequencediagram 156034 "V3 undo"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+
+    sequencediagram 156418 "V3 Redo"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A3
+    end
+  end
+end

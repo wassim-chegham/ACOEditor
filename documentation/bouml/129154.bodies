@@ -1,0 +1,70 @@
+class Ihm
+!!!132482.php!!!	__construct(inout buffer : ) : void
+		$this->ihm_hash = spl_object_hash($this);
+		$this->_commands = array();
+		$this->_observers = array();
+
+
+		$this->_text = "";
+		$this->_current_char = '#';
+		$this->_selectionStart = 0;
+		$this->_selectionEnd = 0;
+		$this->crtime = strftime("%T", time());
+
+    $this->_commands['insert'] = new Insert($this, $buffer);
+    $this->_commands['copy'] = new Copy($buffer);
+    $this->_commands['cut'] = new Cut($buffer);
+    $this->_commands['paste'] = new Paste($buffer);
+!!!132610.php!!!	getChar()
+		return $this->_current_char;
+!!!132738.php!!!	setChar(inout char : )
+		$this->_current_char = $char;
+!!!132866.php!!!	getSelectionStart() : int
+		return $this->_selectionStart;
+!!!132994.php!!!	getSelectionEnd() : int
+		return $this->_selectionEnd;
+!!!133122.php!!!	getText() : the
+		return $this->_text;
+!!!133250.php!!!	setText(inout text : String) : void
+		$this->_text = $text;
+!!!133378.php!!!	setSelectionStart(inout val : Integer) : void
+		$this->_selectionStart = $val;
+    $this->notify();
+!!!133506.php!!!	setSelectionEnd(inout val : Integer) : void
+		$this->_selectionEnd = $val;
+    $this->notify();
+!!!133634.php!!!	updateSelection(inout selStart : , inout selEnd : )
+    $this->setSelectionStart($selStart);
+    $this->setSelectionEnd($selEnd);
+    $this->notify();
+!!!133762.php!!!	insert()
+   $this->_commands['insert']->execute();
+!!!133890.php!!!	copy()
+		$this->_commands['copy']->execute();
+!!!134018.php!!!	cut()
+		$this->_commands['cut']->execute();
+!!!134146.php!!!	paste()
+		$this->_commands['paste']->execute();
+!!!134274.php!!!	attach(inout o : Observer) : void
+		if(!in_array($o, $this->_observers))
+		{
+			$this->_observers[] = $o;
+		}
+!!!134402.php!!!	detach(inout o : Observer) : void
+		$index = array_search($o, $this->_observers);
+		if($index !== false)
+		{
+			unset($this->_observers[$index]);
+		}
+!!!134530.php!!!	notify() : void
+		foreach($this->_observers as $k => $o)
+		{
+			$o->update($this);
+		}
+!!!134658.php!!!	update(inout s : )
+		// the buffer subject which notifies that something has happened
+
+		// update current state of ihm
+		$this->_selectionStart = $s->getSelectionStart();
+		$this->_selectionEnd = $s->getSelectionEnd();
+		$this->_text = $s->getText();

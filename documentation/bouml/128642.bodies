@@ -1,0 +1,78 @@
+class ConcreteMemento
+!!!130946.php!!!	__construct()
+		$this->_undoArray = array();
+		$this->_maxActionSaved = 10;
+!!!131074.php!!!	getInstance()
+		if ( is_null($this->_instance) ) 
+		{
+			$c = __CLASS__;
+			$this->_instance = new $c();
+		}
+		return $this->_instance;
+!!!131202.php!!!	redo()
+
+		$mem = null;
+    
+		if( count($this->_redoArray) > 0)
+		{
+
+			$mem = array_pop($this->_redoArray);
+
+		}
+
+		return $mem;
+
+!!!131330.php!!!	undo()
+
+		$mem = null;
+
+		if( count($this->_undoArray) > 0)
+		{
+
+			$mem = array_pop($this->_undoArray);
+
+		}
+
+		return $mem;
+
+!!!131458.php!!!	saveAction(inout o : )
+
+		$mem = new Memento();
+
+		foreach($o as $i){
+
+			$mem[$i] = $o[$i];
+
+		}
+
+		if( count($this->_undoArray) >= $this->_maxActionSaved)
+		{
+
+			array_shift($this->_undoArray);
+
+		}
+
+		$this->_undoArray[] = $mem;
+
+!!!131586.php!!!	saveRedoAction(inout o : )
+
+		$mem = new Memento();
+
+		foreach($o as $i)
+		{
+
+			$mem[$i] = $o[$i];
+
+		}
+
+		$this->_redoArray = array();
+		$this->_redoArray[] = $mem;
+
+!!!131714.php!!!	setMaxActions(inout vam : )
+
+		$this->_maxActionSaved = $val;
+
+!!!131842.php!!!	geUndoArrayLen()
+
+		return cpunt($this->_undoArray);
+

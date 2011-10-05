@@ -1,0 +1,7 @@
+class Copy
+!!!131970.php!!!	__construct(inout receiver : Buffer) : void
+
+		$this->_receiver = $receiver;
+!!!132098.php!!!	execute() : void
+
+		$this->_receiver->copyText();

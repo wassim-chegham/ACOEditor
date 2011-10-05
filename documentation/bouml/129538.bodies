@@ -1,0 +1,23 @@
+class Session
+!!!135426.php!!!	__construct() : void
+
+
+    	$_buffer = new Buffer();
+      $this->ihm = new Ihm($_buffer);
+      $_buffer->attach($this->ihm);
+      $this->ihm->attach($_buffer);
+
+!!!135554.php!!!	__destruct() : void
+
+!!!135682.php!!!	__clone() : void
+
+    trigger_error( 'Clone is not allowed.', E_USER_ERROR );
+!!!135810.php!!!	getInstance() : the
+
+    
+  	if( is_null( self::$_instance ) )
+    {
+	  	$c = __CLASS__;
+      self::$_instance = new $c();
+    }
+    return self::$_instance;

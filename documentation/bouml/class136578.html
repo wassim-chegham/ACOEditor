@@ -1,0 +1,49 @@
+<!-- Documentation produced by the Html generator of Bouml (http://bouml.free.fr) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Class Caretaker</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body bgcolor="#ffffff">
+
+<div class = "title">Class Caretaker</div>
+<p></p>
+
+<!-- ============================================================= -->
+
+<a name="refclass136578"></a>
+<p>Declaration :</p><ul>
+<li>Php :  class Caretaker </li></ul><div class="sub">
+<a name="refoperation162946"></a>
+<table><tr><td><div class="element">Operation <b>__construct</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + __construct(in $buffer : <a href="class128002.html#refclass128002"><b>Buffer</b></a>) : </li><li>Php : public function __construct($$buffer) </li></ul><a name="refrelation137986"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class128770.html#refclass128770"><b>Memento</b></a>, multiplicity : *</li><li>Php : private $</li></ul><a name="refrelation138498"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class136066.html#refclass136066"><b>InsertSave</b></a></li><li>Php : private $</li></ul><a name="refrelation138754"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class136194.html#refclass136194"><b>PasteSave</b></a></li><li>Php : private $</li></ul><a name="refrelation139010"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class136450.html#refclass136450"><b>CopySave</b></a></li><li>Php : private $</li></ul><a name="refrelation139266"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class136322.html#refclass136322"><b>CutSave</b></a></li><li>Php : private $</li></ul><a name="refoperation151426"></a>
+<table><tr><td><div class="element">Operation <b>save</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + save(in commandSave : <a href="class128514.html#refclass128514"><b>Command</b></a>) : </li><li>Php : public function save($commandSave) </li></ul><a name="refoperation151554"></a>
+<table><tr><td><div class="element">Operation <b>getNextMemento</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getNextMemento() : <a href="class128770.html#refclass128770"><b>Memento</b></a></li><li>Php : public function getNextMemento(??????) </li></ul><a name="refattribute139394"></a>
+<table><tr><td><div class="element">Attribute <b>_mementos</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - _mementos : <a href="class128770.html#refclass128770"><b>Memento</b></a></li><li>Php : private $_mementos</li></ul><a name="refattribute139522"></a>
+<table><tr><td><div class="element">Attribute <b>_end</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - _end : int</li><li>Php : private $_end</li></ul><a name="refrelation153602"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class128002.html#refclass128002"><b>Buffer</b></a></li><li>Php : private $</li></ul><a name="refrelation154626"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class156802.html#refclass156802"><b>Undo</b></a></li><li>Php : private $</li></ul><a name="refrelation154882"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class156930.html#refclass156930"><b>Redo</b></a></li><li>Php : private $</li></ul><a name="refrelation155394"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class150146.html#refclass150146"><b>Replay</b></a></li><li>Php : private $</li></ul><a name="refattribute141058"></a>
+<table><tr><td><div class="element">Attribute <b>_buffer</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - _buffer : <a href="class128002.html#refclass128002"><b>Buffer</b></a></li><li>Php : private $_buffer</li></ul><a name="refattribute141314"></a>
+<table><tr><td><div class="element">Attribute <b>_current</b></div></td></tr></table>
+<p>Declaration :</p><ul><li>Uml : - _current : int</li><li>Php : private $_current</li></ul><a name="refoperation162562"></a>
+<table><tr><td><div class="element">Operation <b>atTheEnd</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + atTheEnd() : bool</li><li>Php : public function atTheEnd() </li></ul><a name="refoperation162690"></a>
+<table><tr><td><div class="element">Operation <b>getCurrent</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + getCurrent() : int</li><li>Php : public function getCurrent() </li></ul><a name="refoperation162818"></a>
+<table><tr><td><div class="element">Operation <b>resetCurrent</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + resetCurrent(in current : int) : void</li><li>Php : public function resetCurrent($current) </li></ul><a name="refrelation162690"></a>
+<table><tr><td><div class="element">Relation <b>&lt;association&gt;</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : -  : <a href="class136194.html#refclass136194"><b>PasteSave</b></a></li><li>Php : private $</li></ul><a name="refoperation169986"></a>
+<table><tr><td><div class="element">Operation <b>decCurrent</b></div></td></tr></table><p>Declaration :</p><ul><li>Uml : + decCurrent() : void</li><li>Php : public function decCurrent() </li></ul></div>
+<p>All public operations : <a href="class136578.html#refoperation162946"><b>__construct</b></a> , <a href="class136578.html#refoperation162562"><b>atTheEnd</b></a> , <a href="class136578.html#refoperation169986"><b>decCurrent</b></a> , <a href="class136578.html#refoperation162690"><b>getCurrent</b></a> , <a href="class136578.html#refoperation151554"><b>getNextMemento</b></a> , <a href="class136578.html#refoperation162818"><b>resetCurrent</b></a> , <a href="class136578.html#refoperation151426"><b>save</b></a> </p>
+</body>
+</html>

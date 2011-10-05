@@ -1,0 +1,18 @@
+class Insert
+!!!134786.php!!!	__construct(inout sender : , inout receiver : Buffer) : void
+
+		$this->_receiver = $receiver;
+		$this->_sender = $sender;
+ 
+		$this->_current_char = '#';
+		$this->crtime = strftime("%T", time());
+		$this->insert_hash = spl_object_hash ($this);
+      
+    $this->sender_hash = $sender->ihm_hash;
+    $this->receiver_hash = $receiver->buffer_hash;
+    
+!!!134914.php!!!	execute() : void
+
+		$char = $this->_sender->getChar();
+		$this->_current_char = $char;
+		$this->_receiver->insert($char);

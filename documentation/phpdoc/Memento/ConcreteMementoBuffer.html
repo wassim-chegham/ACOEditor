@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ConcreteMementoBuffer</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ConcreteMementoBuffer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../Memento/Memento.html">Memento</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The concrete Memento of the Buffer</p>
+<p class="description"><p>The concrete Memento of the Buffer</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> wassim Chegham &amp; hugo Marchadour</li>
+				<li><span class="field">version:</span> 0.1</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_ConcreteMementoBuffer.php.html">/ConcreteMementoBuffer.php</a> (line <span class="field"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>
+					<a href="#$_buffer" title="details" class="var-name">$_buffer</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type"><a href="../Command/Clipboard.html">Clipboard</a></span>
+					<a href="#$_clipboard" title="details" class="var-name">$_clipboard</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Integer</span>
+					<a href="#$_selectionEnd" title="details" class="var-name">$_selectionEnd</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Integer</span>
+					<a href="#$_selectionStart" title="details" class="var-name">$_selectionStart</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">String</span>
+					<a href="#$_text" title="details" class="var-name">$_text</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																				
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>&nbsp;<span class="var-name">&$buffer</span>, <span class="var-type">Mixed[]</span>&nbsp;<span class="var-name">$attrs</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../Command/Clipboard.html">Clipboard</a></span>
+										<a href="#getClipboard" title="details" class="method-name">getClipboard</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Integer</span>
+										<a href="#getSelectionEnd" title="details" class="method-name">getSelectionEnd</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Integer</span>
+										<a href="#getSelectionStart" title="details" class="method-name">getSelectionStart</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#getText" title="details" class="method-name">getText</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#redo" title="details" class="method-name">redo</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_buffer" id="$_buffer"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>
+			<span class="var-name">$_buffer</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a57">57</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current buffer object</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_clipboard" id="$_clipboard"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../Command/Clipboard.html">Clipboard</a></span>
+			<span class="var-name">$_clipboard</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current clipboard object</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_selectionEnd" id="$_selectionEnd"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Integer</span>
+			<span class="var-name">$_selectionEnd</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a51">51</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The value of the end of the selection</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_selectionStart" id="$_selectionStart"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Integer</span>
+			<span class="var-name">$_selectionStart</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a45">45</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The value of the beginning of the selection</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_text" id="$_text"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">String</span>
+			<span class="var-name">$_text</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">var:</span> The current text</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a65">65</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The constructor of the ConcreteMementoBuffer</p>
+<p class="description"><p>The constructor of the ConcreteMementoBuffer</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>&nbsp;<span class="var-name">&$buffer</span>, <span class="var-type">Mixed[]</span>&nbsp;<span class="var-name">$attrs</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../Command/Buffer.html">Buffer</a></span>
+				<span class="var-name">&$buffer</span><span class="var-description">: The reference of the used Buffer</span>			</li>
+					<li>
+				<span class="var-type">Mixed[]</span>
+				<span class="var-name">$attrs</span><span class="var-description">: An array containing the current text, the used clipboard, the beginning and the end of the selection</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetClipboard" id="getClipboard"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getClipboard</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the used clipboard</p>
+<p class="description"><p>Get the used clipboard</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The the used clipboard</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Command/Clipboard.html">Clipboard</a></span>
+		<span class="method-name">
+			getClipboard
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSelectionEnd" id="getSelectionEnd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSelectionEnd</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the end of the selection</p>
+<p class="description"><p>Get the end of the selection</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the end of the selection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Integer</span>
+		<span class="method-name">
+			getSelectionEnd
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSelectionStart" id="getSelectionStart"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSelectionStart</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the beginning of the selection</p>
+<p class="description"><p>Get the beginning of the selection</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the beginning of the selection</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Integer</span>
+		<span class="method-name">
+			getSelectionStart
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetText" id="getText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getText</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a96">96</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the current text</p>
+<p class="description"><p>Get the current text</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The value of the current text</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getText
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodredo" id="redo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">redo</span> (line <span class="line-number"><a href="../__filesource/fsource_Memento__ConcreteMementoBuffer.php.html#a114">114</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Redo the previous state of the Buffer</p>
+<p class="description"><p>Redo the previous state of the Buffer</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			redo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 03 Dec 2010 16:49:28 +0100 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

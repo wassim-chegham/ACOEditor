@@ -1,0 +1,45 @@
+/**
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/***********************************************************************************/
+/* ACO Editor v3 
+/*
+/* Chegham wassim & Marchadour hugo
+/***********************************************************************************/
+
+1) Project Structure
+2) How to install
+
+
+1) Project Structure:
+------------------
+
++ bin/				: all binaries can be found there
+  + helpers/			: all php functions that are used as helpers
+  + patterns/			: all php classes are in this directory
+  + PhpDocumentator/		: this is the phpdocumentator that is used to generate documentation
+  + tests/			: all test classes / html generated reports are there
+
++ documentation/		: all documentation files  
+  + bouml/			: all UML reports are there (as HTML pages)
+  + phpdoc/			: all generated PHP documentations 
+
++ assets/			: all the assets
+  + css/			: css files
+  + js/				: javascript files
+  + img/			: images
+
+2) How to install:
+------------------
+Please read the INSTALL file, or visit the demo page at <http://acoeditor.cheghamwassim.com>
+

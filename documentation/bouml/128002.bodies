@@ -1,0 +1,165 @@
+class Buffer
+!!!128002.php!!!	__construct() : void
+
+		$this->_observers = array();
+		$this->_text = "";
+		$this->_selectionStart = 0;
+		$this->_selectionEnd = 0;
+		$this->_clipboard = new Clipboard();
+		$this->crtime = strftime("%T", time());
+		$this->buffer_hash = spl_object_hash($this);
+!!!128130.php!!!	getText() : the
+
+		return $this->_text;
+!!!128258.php!!!	setText(inout text : String) : void
+
+		$this->_text = $text;
+!!!128386.php!!!	getSelectionStart() : int
+
+		return $this->_selectionStart;
+!!!128514.php!!!	getSelectionEnd() : int
+
+		return $this->_selectionEnd;
+!!!128642.php!!!	setSelectionStart(inout val : Integer) : void
+
+		$this->_selectionStart = $val;
+!!!128770.php!!!	setSelectionEnd(inout val : Integer) : void
+
+		$this->_selectionEnd = $val;
+!!!128898.php!!!	setSelection(inout start : Integer, inout end : Integer) : void
+
+
+		if ( !is_int($start) || !is_int($end) )
+		{
+			throw new Exception( 'Buffer->setSelection(int, int).', E_USER_ERROR );
+		}
+		else {
+
+			if( $start <= $end)
+			{
+				$this->_selectionStart = $start;
+				$this->_selectionEnd = $end;
+			}
+			else
+			{
+				$this->_selectionStart = $end;
+				$this->_selectionEnd = $start;
+			}
+
+		}
+
+!!!129026.php!!!	insert(inout char : Character) : void
+
+		$tmp_str = $this->_text;
+
+		$this->_text = Buffer::_substr($tmp_str, 0, $this->_selectionStart);
+		$this->_text .= $char;
+		$this->_text .= Buffer::_substr($tmp_str, $this->_selectionEnd);
+
+		$this->_selectionStart++;
+
+		if($this->_selectionStart !== $this->_selectionEnd)
+		{
+			$this->_selectionEnd = $this->_selectionStart;
+		}
+
+		$this->notify();
+
+!!!129154.php!!!	setTextIntoClipBoard(inout text : ) : void
+
+		$this->_clipboard->setText($text);
+!!!129282.php!!!	getTextFromClipBoard() : String
+
+		return $this->_clipboard->getText();
+!!!129410.php!!!	copyText() : void
+
+		$text = Buffer::_substr($this->_text, $this->_selectionStart, $this->_selectionEnd);
+
+		if ( $text !== "" )
+		$this->setTextIntoClipBoard($text);
+!!!129538.php!!!	cutText() : void
+
+		
+		if( $this->_selectionStart !== $this->_selectionEnd)
+		{
+
+			$text_to_be_cut = Buffer::_substr($this->_text, $this->_selectionStart, $this->_selectionEnd);
+			$this->setTextIntoClipBoard($text_to_be_cut);
+//			var_dump($text_to_be_cut, $this->_selectionStart, $this->_selectionEnd);
+
+			$tmp_str = Buffer::_substr($this->_text, 0, $this->_selectionStart);
+			$tmp_str .= Buffer::_substr($this->_text, $this->_selectionEnd);
+			
+			// deselection
+			$this->_selectionEnd = $this->_selectionStart;
+
+			$this->_text = $tmp_str;
+
+			$this->notify();
+
+		}
+
+!!!129666.php!!!	pasteText() : void
+
+
+		if( $this->_clipboard->getText() !== "")
+		{
+
+			$paste = $this->getTextFromClipBoard();
+
+			$tmp_res = Buffer::_substr($this->_text, 0, $this->_selectionStart);
+			$tmp_res .= $paste;
+			$tmp_res .= Buffer::_substr($this->_text, $this->_selectionEnd);
+
+      $this->_selectionStart += strlen($paste);
+			if( $this->_selectionStart !== $this->_selectionEnd )
+			{
+
+				// deselection
+				$this->_selectionEnd = $this->_selectionStart;
+
+			}
+
+			$this->_text = $tmp_res;
+
+			$this->notify();
+
+		}
+
+!!!129794.php!!!	attach(inout o : Observer) : void
+
+		if(!in_array($o, $this->_observers))
+		{
+			$this->_observers[] = $o;
+		}
+!!!129922.php!!!	detach(inout o : Observer) : void
+
+		$index = array_search($o, $this->_observers);
+		if($index)
+		{
+			unset($this->_observers[$index]);
+		}
+!!!130050.php!!!	notify() : void
+
+		foreach($this->_observers as $k => $o)
+		{
+			$o->update($this);
+		}
+!!!130178.php!!!	update(inout s : )
+
+		// the IHM subject which notifies the buffer
+
+		// update current state of buffer
+		$this->_selectionStart = $s->getSelectionStart();
+		$this->_selectionEnd = $s->getSelectionEnd();
+		$this->_text = $s->getText();;
+!!!130306.php!!!	_substr(inout str : unknown_type, inout selStart : unknown_type, inout selEnd : unknown_type = -1)
+
+		if ( $selEnd === -1 )
+		{
+			$selEnd = strlen($str);
+		}
+		else {
+			$selEnd -= $selStart;
+		}
+		return substr( $str, $selStart, $selEnd ); 

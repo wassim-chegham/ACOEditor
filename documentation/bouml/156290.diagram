@@ -1,0 +1,128 @@
+format 74
+
+classinstance 128386 class_ref 136578 // Caretaker
+ color mediumblue  name "caretaker"   xyz 967.8 4 2000 life_line_z 2010
+classinstance 129026 class_ref 128002 // Buffer
+  name ""   xyz 301.7 5 2000 life_line_z 2000
+classinstance 131586 class_ref 136706 // ConcreteMementoInsert
+ color lightmediumblue  name "m"   xyz 804.2 331 2010 life_line_z 2010
+classinstance 138882 class_ref 129282 // Insert
+  name "insert"   xyz 578 4 2005 life_line_z 2000
+classinstance 139522 class_ref 129154 // Ihm
+  name ""   xyz 182 4 2005 life_line_z 1995
+classinstance 140034 class_ref 136066 // InsertSave
+  name "insertSave"   xyz 681 4 2025 life_line_z 2000
+classinstance 146306 class_ref 156674 // ConcreteMementoBuffer
+ color lightmediumblue  name "b"   xyz 375 154 2005 life_line_z 2000
+note 146818 "Case : cartaker.current%10==0"
+  color lightorange  xyzwh 12 112 1995 1065 187
+durationcanvas 140802 classinstance_ref 139522 // :Ihm
+  xyzwh 201 68 1995 11 605
+end
+durationcanvas 140930 classinstance_ref 140034 // insertSave:InsertSave
+  xyzwh 741 68 2010 11 458
+  overlappingdurationcanvas 145410
+    xyzwh 747 317 2020 11 190
+  end
+end
+durationcanvas 142210 classinstance_ref 138882 // insert:Insert
+  xyzwh 610 504 2010 11 25
+end
+durationcanvas 145154 classinstance_ref 128386 // caretaker:Caretaker
+  xyzwh 1021 95 2040 11 411
+  overlappingdurationcanvas 148354
+    xyzwh 1027 264 2050 11 25
+  end
+  overlappingdurationcanvas 148610
+    xyzwh 1027 446 2050 11 25
+  end
+end
+durationcanvas 145666 classinstance_ref 131586 // m:ConcreteMementoInsert
+  xyzwh 876 383 2020 11 34
+end
+durationcanvas 146946 classinstance_ref 129026 // :Buffer
+  xyzwh 320 128 2010 11 137
+end
+durationcanvas 147458 classinstance_ref 146306 // b:ConcreteMementoBuffer
+  xyzwh 447 201 2010 11 30
+end
+msg 141058 asynchronous
+  from durationcanvas_ref 140802
+  to durationcanvas_ref 140930
+  yz 68 2025 msg operation_ref 142594 // "execute()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 661 56
+msg 142338 synchronous
+  from durationcanvas_ref 140930
+  to durationcanvas_ref 142210
+  yz 511 2030 msg operation_ref 134914 // "execute() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 664 495
+msg 145282 synchronous
+  from durationcanvas_ref 140930
+  to durationcanvas_ref 145154
+  yz 95 3005 explicitmsg "save(insertSave)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 915 80
+msg 145538 synchronous
+  from durationcanvas_ref 145154
+  to durationcanvas_ref 145410
+  yz 317 2025 explicitmsg "getMemento()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 761 303
+msg 145794 synchronous
+  from durationcanvas_ref 145410
+  to durationcanvas_ref 145666
+  yz 386 2025 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 814 377
+msg 145922 return
+  from durationcanvas_ref 145666
+  to durationcanvas_ref 145410
+  yz 402 2030 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 147074 synchronous
+  from durationcanvas_ref 145154
+  to durationcanvas_ref 146946
+  yz 128 2045 msg operation_ref 151810 // "getMemento() : Memento"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 346 116
+msg 147586 synchronous
+  from durationcanvas_ref 146946
+  to durationcanvas_ref 147458
+  yz 201 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 377 185
+msg 147714 return
+  from durationcanvas_ref 147458
+  to durationcanvas_ref 146946
+  yz 219 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 147842 return
+  from durationcanvas_ref 145410
+  to durationcanvas_ref 145154
+  yz 433 2045 explicitmsg "m"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 997 421
+msg 147970 return
+  from durationcanvas_ref 146946
+  to durationcanvas_ref 145154
+  yz 238 3005 explicitmsg "b"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 1000 223
+reflexivemsg 148482 synchronous
+  to durationcanvas_ref 148354
+  yz 264 2055 explicitmsg "save(b)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 1033 247
+reflexivemsg 148738 synchronous
+  to durationcanvas_ref 148610
+  yz 446 2055 explicitmsg "save(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 1029 429
+msg 149122 return
+  from durationcanvas_ref 145154
+  to durationcanvas_ref 145410
+  yz 492 2045 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
